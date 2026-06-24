@@ -8,7 +8,7 @@ Only relevant certifications connected to engineering and technical learning are
 
 # Current Certificate
 
-# MITx 6.002.1x: Circuits and Electronics 1[MITx 6.002.1x Certificate _ edX.pdf](https://github.com/user-attachments/files/29301755/MITx.6.002.1x.Certificate._.edX.pdf)
+# [MITx 6.002.1x Certificate _ edX.pdf](https://github.com/user-attachments/files/29301755/MITx.6.002.1x.Certificate._.edX.pdf)
 
 
 ## Overview
@@ -53,17 +53,9 @@ The certificate can be found in:
 
 ---
 
-## Next Steps
-
-This repository serves as a foundation for future projects involving
-
-- MATLAB
-- Circuit Simulation
-- Signal Processing
-- Embedded Systems
-- Electronics Design
 
 ## MATLAB Onramp
+
 https://matlabacademy.mathworks.com/progress/share/certificate.html?id=902a0990-0046-441e-aec8-c9c82dd8b052&
 Introductory MATLAB course completed through MathWorks Training Services.
 
@@ -74,6 +66,16 @@ Topics covered:
 * vectors and matrices
 * plotting and visualization
 * basic engineering computation workflow
+
+ ## Next Steps
+
+This repository serves as a foundation for future projects involving
+
+- MATLAB
+- Circuit Simulation
+- Signal Processing
+- Embedded Systems
+- Electronics Design
 
 The certificate file is included in this folder.
 
