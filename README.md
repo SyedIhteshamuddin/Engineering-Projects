@@ -47,6 +47,10 @@ This repository also includes a few engineering-related certificates and learnin
 -embedded systems
 -engineering software/tools
 
+- MITx Certificate
+- Circuit Analysis
+- Electronics
+
 Check Certifications Folder for more details.
 ---
 
