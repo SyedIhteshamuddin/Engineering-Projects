@@ -48,8 +48,9 @@ This repository also includes a few engineering-related certificates and learnin
 -engineering software/tools
 
 - MITx Certificate
-- Circuit Analysis
-- Electronics
+-Circuit Analysis
+-Electronics
+
 
 Check Certifications Folder for more details.
 ---
