@@ -1,9 +1,3 @@
-I wouldn't make it sound overly polished or "startup-like." Admissions officers and engineers read hundreds of repositories, and the ones that stand out usually sound like they were written by someone who genuinely built the project—not by AI.
-
-Here's a README I'd be comfortable putting on GitHub.
-
----
-
 # Smart Assistive Navigator (SAN)
 
 *A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
