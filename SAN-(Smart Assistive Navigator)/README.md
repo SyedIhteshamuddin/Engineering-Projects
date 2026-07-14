@@ -284,15 +284,7 @@ Although the current prototype demonstrates the core navigation system, future v
 
 Building this project taught me much more than simply connecting sensors to an Arduino.
 
-Throughout development I learned about:
-
-* Embedded system design
-* Sensor calibration
-* Finite State Machines (FSM)
-* Real-time decision making
-* Firmware organization
-* Hardware debugging
-* Designing reliable user feedback systems
+One thing I didn't expect was how difficult it was to make the sensors reliable. Early versions constantly jumped between states because ultrasonic readings fluctuated. I eventually solved this by combining median filtering, hysteresis, and cached readings instead of relying on raw sensor values. That experience taught me that reliability often comes from small engineering decisions rather than adding more hardware.
 
 Perhaps the biggest lesson was that making a system *reliable* is often more difficult than making it simply *work*.
 
