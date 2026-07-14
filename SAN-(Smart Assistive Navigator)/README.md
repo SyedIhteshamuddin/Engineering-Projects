@@ -2,10 +2,6 @@
 
 <img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
 
-## Project Overview
-
-Smart Assistive Navigator (SAN) is a wearable embedded system prototype designed to improve mobility for visually impaired users by detecting obstacles and sudden ground drops using dual ultrasonic sensing. The system processes real-time sensor data through a finite state machine and communicates hazards using haptic, audio, and visual feedback.
-
 ---
 
 ![Arduino](https://img.shields.io/badge/Arduino-UNO-blue)
@@ -14,8 +10,9 @@ Smart Assistive Navigator (SAN) is a wearable embedded system prototype designed
 ![Accessibility](https://img.shields.io/badge/Accessibility-Assistive%20Technology-orange)
 
 ---
+## Project Overview
 
-## About the Project
+Smart Assistive Navigator (SAN) is a wearable embedded system prototype designed to improve mobility for visually impaired users by detecting obstacles and sudden ground drops using dual ultrasonic sensing. The system processes real-time sensor data through a finite state machine and communicates hazards using haptic, audio, and visual feedback.
 
 Smart Assistive Navigator (SAN) is an embedded systems project built on the Arduino Uno that assists users while walking by detecting obstacles in front of them and identifying sudden drops such as stairs or potholes.
 
@@ -69,25 +66,25 @@ This project explores a low-cost embedded solution capable of providing earlier 
 ```
 ## Features
 
-✔ Dual ultrasonic sensing
+- Dual ultrasonic sensing
 
-✔ Real-time obstacle detection
+- Real-time obstacle detection
 
-✔ Drop detection
+- Drop detection
 
-✔ Adaptive audio alerts
+- Adaptive audio alerts
 
-✔ Adaptive vibration feedback
+- Adaptive vibration feedback
 
-✔ LCD monitoring
+- LCD monitoring
 
-✔ Sensor fault detection
+- Sensor fault detection
 
-✔ Median filtering
+- Median filtering
 
-✔ Boot self-test
+- Boot self-test
 
-✔ Modular firmware
+- Modular firmware
 
 ---
 ## Hardware Table
@@ -108,7 +105,7 @@ This project explores a low-cost embedded solution capable of providing earlier 
 <img width="1738" height="724" alt="SAN - (Smart Assistive Navigator)" src="https://github.com/user-attachments/assets/315533d0-18b0-499b-a635-c413551c5400" />
 
 ---
-## Navigation Logic
+## Firmware Workflow
 
 ```
 Read Sensors
@@ -132,7 +129,7 @@ Update LCD
 Generate Audio & Haptic Alerts
 ```
 ---  
-## Working Principle
+## System Workflow
 
 ```text
         ┌──────────────┐
@@ -232,7 +229,19 @@ The firmware is divided into independent modules to keep the code organized and 
 * Boot diagnostics
 * Serial debugging
 
-This modular structure made testing and debugging significantly easier during development.
+This modular structure made testing and debugging significantly easier during development
+
+
+## Engineering Challenges
+
+During development several practical challenges had to be solved:
+
+- Filtering noisy ultrasonic sensor readings
+- Preventing false stair detection
+- Stabilizing state transitions using hysteresis
+- Handling temporary sensor failures
+- Designing distinct vibration and buzzer patterns
+- Organizing firmware into modular components for easier debugging
 
 
 ## Safety Features
@@ -259,8 +268,6 @@ This modular structure made testing and debugging significantly easier during de
 | Signal Processing | Median Filter |
 
 
----
-
 ## Future Improvements
 
 Although the current prototype demonstrates the core navigation system, future versions could include:
@@ -279,7 +286,6 @@ Although the current prototype demonstrates the core navigation system, future v
 
 • IMU integration for orientation detection
 
----
 
 ## What I Learned
 
@@ -297,8 +303,7 @@ Throughout development I learned about:
 
 Perhaps the biggest lesson was that making a system *reliable* is often more difficult than making it simply *work*.
 
----
-## Project Status
+## Current Status
 
 | Status | Progress |
 |---------|----------|
@@ -317,8 +322,10 @@ Class 12 Student
 
 Interested in Embedded Systems, Electrical Engineering, and Assistive Technologies.
 
----
-
 ## Feedback
 
 If you have suggestions, ideas, or improvements for this project, feel free to open an issue or reach out. Constructive feedback is always welcome.
+---
+## License
+
+This project is shared for educational purposes.
