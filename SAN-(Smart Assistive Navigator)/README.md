@@ -1,9 +1,8 @@
-# Smart Assistive Navigator (SAN)
-
-*A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
-
+Smart Assistive Navigator (SAN)
 
 <img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
+
+*A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
 
 ---
 
@@ -66,29 +65,45 @@ This project explores a low-cost embedded solution capable of providing earlier 
       ▼         ▼         ▼
    LCD      Vibrator    Buzzer
 ```
+## Features
 
+✔ Dual ultrasonic sensing
 
-[SAN - (Smart Assistive Navigator).pdf](https://github.com/user-attachments/files/30001402/SAN.-.Smart.Assistive.Navigator.pdf)
+✔ Real-time obstacle detection
 
+✔ Drop detection
 
-# How It Works
+✔ Adaptive audio alerts
 
-The system continuously measures two distances:
+✔ Adaptive vibration feedback
 
-* **Front Sensor** → detects obstacles directly ahead.
-* **Ground Sensor** → measures the distance to the walking surface and detects sudden drops.
+✔ LCD monitoring
 
-Sensor readings are processed through a median filter before being evaluated by the navigation state machine.
+✔ Sensor fault detection
 
-Depending on the measured distances, the system enters one of the following states:
+✔ Median filtering
 
-* SAFE
-* NEAR
-* CRITICAL
-* DROP
-* SENSOR ERROR
+✔ Boot self-test
 
-Each state generates a unique combination of vibration and buzzer patterns so the user can distinguish different situations without looking at the display.
+✔ Modular firmware
+
+---
+## Hardware Table
+
+| Component                 | Qty | Purpose                   |
+| ------------------------- | --: | ------------------------- |
+| Arduino Uno               |   1 | Main controller           |
+| HC-SR04 Ultrasonic Sensor |   2 | Obstacle & drop detection |
+| 16×2 LCD                  |   1 | System status             |
+| Vibration Motor           |   1 | Haptic feedback           |
+| Piezo Buzzer              |   1 | Audio feedback            |
+| NPN Transistor            |   1 | Motor driver              |
+| Breadboard                |   1 | Prototype                 |
+| Jumper Wires              |   — | Connections               |
+
+---
+
+<img width="1738" height="724" alt="SAN - (Smart Assistive Navigator)" src="https://github.com/user-attachments/assets/315533d0-18b0-499b-a635-c413551c5400" />
 
 ---
 ## Working Principle
@@ -148,59 +163,89 @@ Update LCD
       ▼
 Generate Audio & Haptic Alerts
 ```
+  
+ ## Working Principle
+          ┌──────────────┐
+          │    START     │
+          └──────┬───────┘
+                 │
+                 ▼
+      Read Front & Ground Sensors
+                 │
+                 ▼
+        Median Noise Filtering
+                 │
+                 ▼
+      Navigation State Machine
+                 │
+      ┌──────────┼──────────┐
+      ▼          ▼          ▼
+   LCD Update  Vibrator   Buzzer
+                 │
+                 ▼
+             Repeat Loop
+
 
 ---
 
-# Features
+## Alert System
 
-* Dual ultrasonic sensor navigation
-* Front obstacle detection
-* Ground drop/stair detection
-* Real-time finite state machine
-* Adaptive vibration feedback
-* Adaptive buzzer alerts
-* LCD status monitoring
-* Sensor failure detection
-* Median-based sensor filtering for stable readings
-* Boot self-test during startup
-* Modular firmware architecture
+| State        | Vibration      | Buzzer                 |
+| ------------ | -------------- | ---------------------- |
+| SAFE         | Off            | Off                    |
+| NEAR         | Slow pulses    | Slow beeps             |
+| CRITICAL     | Fast pulses    | Fast beeps             |
+| DROP         | Long vibration | High-frequency warning |
+| SENSOR ERROR | Error pulse    | Error tone             |
 
 ---
+## Repository Structure
 
-# Hardware Used
+Smart-Assistive-Navigator/
 
-| Component                 | Quantity    |
-| ------------------------- | ----------- |
-| Arduino Uno               | 1           |
-| HC-SR04 Ultrasonic Sensor | 2           |
-| 16×2 LCD Display          | 1           |
-| Vibration Motor           | 1           |
-| Piezo Buzzer              | 1           |
-| Breadboard                | 1           |
-| Jumper Wires              | As required |
+├── Firmware/
+│     └── SAN.ino
+│
+├── Circuit/
+│     └── Tinkercad Design
+│
+├── Images/
+│     ├── Hero.png
+│     ├── Circuit.png
+│     └── Workflow.png
+│
+├── Demo/
+│     └── Demo.mp4
+│
+├── BOM/
+│     └── Bill_of_Materials.pdf
+│
+└── README.md
 
 ---
+## Software Architecture
 
-<img width="1738" height="724" alt="SAN - (Smart Assistive Navigator)" src="https://github.com/user-attachments/assets/315533d0-18b0-499b-a635-c413551c5400" />
-
----
-
-Main Loop
+loop()
 
 │
 
-├── Read Sensors
-
-├── Median Filter
-
-├── State Machine
-
-├── LCD Manager
-
-├── Alert Manager
-
+├── Sensor Module
+│      ├── Front Sensor
+│      └── Ground Sensor
+│
+├── Signal Processing
+│      └── Median Filter
+│
+├── Decision Engine
+│      └── Finite State Machine
+│
+├── Display Manager
+│
+├── Alert Controller
+│      ├── Vibration
+│      └── Buzzer
+│
 └── Serial Debug
-
 ---
 
 ## Software Design
@@ -217,19 +262,6 @@ The firmware is divided into independent modules to keep the code organized and 
 
 This modular structure made testing and debugging significantly easier during development.
 
----
-
-## Alert System
-
-| State        | Vibration      | Buzzer                 |
-| ------------ | -------------- | ---------------------- |
-| SAFE         | Off            | Off                    |
-| NEAR         | Slow pulses    | Slow beeps             |
-| CRITICAL     | Fast pulses    | Fast beeps             |
-| DROP         | Long vibration | High-frequency warning |
-| SENSOR ERROR | Error pulse    | Error tone             |
-
----
 
 ## Safety Features
 
@@ -241,39 +273,42 @@ This modular structure made testing and debugging significantly easier during de
 * Real-time status display
 
 ---
+## Key Specifications
+
+Obstacle Detection Range: 2–300 cm
+
+Ground Drop Detection Threshold: 22 cm
+
+Controller: Arduino Uno
+
+Processing: Real-Time FSM
+
+Noise Reduction: Median Filter
+
+Feedback Modes: LCD + Vibration + Buzzer
+
+Firmware Language: Embedded C++
+
+
+---
 
 ## Future Improvements
 
 Although the current prototype demonstrates the core navigation system, future versions could include:
 
-* Rechargeable battery management
-* GPS-based outdoor navigation
-* Voice guidance
-* Bluetooth connectivity
-* Mobile application integration
-* AI-assisted path planning
+• Battery-powered portable enclosure
 
----
+• Rechargeable battery management
 
-## Repository Structure
+• Waterproof housing
 
-Smart-Assistive-Navigator/
+• Voice feedback
 
-│
+• Bluetooth diagnostics
 
-├── Firmware/
+• Lightweight wearable PCB
 
-├── Circuit/
-
-├── Images/
-
-├── Demo/
-
-├── Documents/
-
-├── BOM/
-
-└── README.md
+• IMU integration for orientation detection
 
 ---
 
