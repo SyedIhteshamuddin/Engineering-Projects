@@ -2,6 +2,8 @@
 
 *A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
 
+<img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
+
 ---
 
 ## About the Project
@@ -13,6 +15,10 @@ Instead of relying on a single warning mechanism, the system communicates danger
 The project was developed to explore how embedded systems and simple sensors can be combined to solve real-world accessibility problems.
 
 ---
+## Demo Video
+
+https://github.com/user-attachments/assets/2c6f290e-6d18-4922-b412-0dd310eef9df
+
 
 ## Features
 
