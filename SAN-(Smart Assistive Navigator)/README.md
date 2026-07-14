@@ -2,7 +2,16 @@
 
 *A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
 
+# [ HERO IMAGE HERE ]
+
 <img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
+
+---
+
+![Arduino](https://img.shields.io/badge/Arduino-UNO-blue)
+![Language](https://img.shields.io/badge/Language-C%2B%2B-blue)
+![Embedded](https://img.shields.io/badge/Embedded-Systems-success)
+![Accessibility](https://img.shields.io/badge/Accessibility-Assistive%20Technology-orange)
 
 ---
 
@@ -18,6 +27,48 @@ The project was developed to explore how embedded systems and simple sensors can
 ## Demo Video
 
 https://github.com/user-attachments/assets/2c6f290e-6d18-4922-b412-0dd310eef9df
+
+
+# Problem Statement
+
+Millions of visually impaired individuals rely on traditional white canes for navigation.
+
+While effective for nearby obstacles, they often provide limited awareness of:
+
+- obstacles at head level
+- objects farther ahead
+- sudden drops
+- stairs
+- potholes
+
+This project explores a low-cost embedded solution capable of providing earlier warnings through intelligent sensing.
+
+---
+
+# Our Solution
+
+```
+
+```
+          Walking Path
+                │
+                ▼
+
+     Front Ultrasonic Sensor
+                │
+                ▼
+         Arduino UNO
+                │
+                │
+     Ground Ultrasonic Sensor
+                │
+                ▼
+      Intelligent Decision System
+                │
+      ┌─────────┼─────────┐
+      ▼         ▼         ▼
+   LCD      Vibrator    Buzzer
+```
 
 
 ## Features
