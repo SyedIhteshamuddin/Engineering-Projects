@@ -12,9 +12,7 @@
 ---
 ## Project Overview
 
-Smart Assistive Navigator (SAN) is a wearable embedded system prototype designed to improve mobility for visually impaired users by detecting obstacles and sudden ground drops using dual ultrasonic sensing. The system processes real-time sensor data through a finite state machine and communicates hazards using haptic, audio, and visual feedback.
-
-Smart Assistive Navigator (SAN) is an embedded systems project built on the Arduino Uno that assists users while walking by detecting obstacles in front of them and identifying sudden drops such as stairs or potholes.
+Smart Assistive Navigator (SAN) is a wearable embedded systems prototype built on the Arduino Uno to improve mobility for visually impaired users. Using dual ultrasonic sensors, the system detects obstacles ahead and sudden ground drops in real time. A finite state machine processes sensor data and communicates hazards through vibration, audio alerts, and a 16×2 LCD, providing intuitive multi-modal feedback for safer navigation.
 
 Instead of relying on a single warning mechanism, the system communicates danger through **vibration**, **audio alerts**, and a **16×2 LCD**, allowing users to receive immediate feedback depending on the surrounding environment.
 
@@ -229,7 +227,7 @@ The firmware is divided into independent modules to keep the code organized and 
 * Boot diagnostics
 * Serial debugging
 
-This modular structure made testing and debugging significantly easier during development
+This modular structure made testing and debugging significantly easier during development.
 
 
 ## Engineering Challenges
@@ -272,19 +270,15 @@ During development several practical challenges had to be solved:
 
 Although the current prototype demonstrates the core navigation system, future versions could include:
 
-• Battery-powered portable enclosure
+- Rechargeable battery management
 
-• Rechargeable battery management
+- Waterproof housing
 
-• Waterproof housing
+- Voice feedback
 
-• Voice feedback
+- Bluetooth diagnostics
 
-• Bluetooth diagnostics
-
-• Lightweight wearable PCB
-
-• IMU integration for orientation detection
+- Lightweight wearable PCB
 
 
 ## What I Learned
@@ -312,6 +306,7 @@ Perhaps the biggest lesson was that making a system *reliable* is often more dif
 | Simulation | ✅ Tested |
 | Documentation | ✅ Complete |
 | Demo Video | ✅ Available |
+| GitHub Repository | ✅ Public |
 ---
 
 ## Author
