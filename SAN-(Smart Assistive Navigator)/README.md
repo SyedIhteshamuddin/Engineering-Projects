@@ -11,8 +11,7 @@
 
 ---
 ## Project Overview
-
-Smart Assistive Navigator (SAN) is a wearable embedded systems prototype built on the Arduino Uno to improve mobility for visually impaired users. Using dual ultrasonic sensors, the system detects obstacles ahead and sudden ground drops in real time. A finite state machine processes sensor data and communicates hazards through vibration, audio alerts, and a 16×2 LCD, providing intuitive multi-modal feedback for safer navigation.
+* SAN is A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
 
 Instead of relying on a single warning mechanism, the system communicates danger through **vibration**, **audio alerts**, and a **16×2 LCD**, allowing users to receive immediate feedback depending on the surrounding environment.
 
