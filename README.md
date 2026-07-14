@@ -8,6 +8,9 @@ Most of these projects started as small experiments and gradually improved as I 
 
 ## Current Projects
 
+### SAN - (Smart Assistive Navigator)
+A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing
+
 ### Adaptive Smart Light System
 A simple automatic street light simulation using an LDR sensor and adaptive LED brightness control.
 
