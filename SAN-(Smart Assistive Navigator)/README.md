@@ -2,7 +2,7 @@
 
 *A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
 
-# [ HERO IMAGE HERE ]
+## [ HERO IMAGE HERE ]
 
 <img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
 
@@ -48,8 +48,6 @@ This project explores a low-cost embedded solution capable of providing earlier 
 # Our Solution
 
 ```
-
-```
           Walking Path
                 │
                 ▼
@@ -70,38 +68,10 @@ This project explores a low-cost embedded solution capable of providing earlier 
    LCD      Vibrator    Buzzer
 ```
 
+[SAN - (Smart Assistive Navigator).pdf](https://github.com/user-attachments/files/30001402/SAN.-.Smart.Assistive.Navigator.pdf)
 
-## Features
 
-* Dual ultrasonic sensor navigation
-* Front obstacle detection
-* Ground drop/stair detection
-* Real-time finite state machine
-* Adaptive vibration feedback
-* Adaptive buzzer alerts
-* LCD status monitoring
-* Sensor failure detection
-* Median-based sensor filtering for stable readings
-* Boot self-test during startup
-* Modular firmware architecture
-
----
-
-## Hardware Used
-
-| Component                 | Quantity    |
-| ------------------------- | ----------- |
-| Arduino Uno               | 1           |
-| HC-SR04 Ultrasonic Sensor | 2           |
-| 16×2 LCD Display          | 1           |
-| Vibration Motor           | 1           |
-| Piezo Buzzer              | 1           |
-| Breadboard                | 1           |
-| Jumper Wires              | As required |
-
----
-
-## How It Works
+# How It Works
 
 The system continuously measures two distances:
 
@@ -121,8 +91,41 @@ Depending on the measured distances, the system enters one of the following stat
 Each state generates a unique combination of vibration and buzzer patterns so the user can distinguish different situations without looking at the display.
 
 ---
+## Working Principle
 
-## Navigation Logic
+Start
+
+↓
+
+Read Front Sensor
+
+↓
+
+Read Ground Sensor
+
+↓
+
+Median Filter
+
+↓
+
+Determine Navigation State
+
+↓
+
+Generate Alerts
+
+↓
+
+Update LCD
+
+↓
+
+Repeat
+
+---
+
+# Navigation Logic
 
 ```
 Read Sensors
@@ -145,6 +148,58 @@ Update LCD
       ▼
 Generate Audio & Haptic Alerts
 ```
+
+---
+
+# Features
+
+* Dual ultrasonic sensor navigation
+* Front obstacle detection
+* Ground drop/stair detection
+* Real-time finite state machine
+* Adaptive vibration feedback
+* Adaptive buzzer alerts
+* LCD status monitoring
+* Sensor failure detection
+* Median-based sensor filtering for stable readings
+* Boot self-test during startup
+* Modular firmware architecture
+
+---
+
+# Hardware Used
+
+| Component                 | Quantity    |
+| ------------------------- | ----------- |
+| Arduino Uno               | 1           |
+| HC-SR04 Ultrasonic Sensor | 2           |
+| 16×2 LCD Display          | 1           |
+| Vibration Motor           | 1           |
+| Piezo Buzzer              | 1           |
+| Breadboard                | 1           |
+| Jumper Wires              | As required |
+
+---
+
+<img width="1738" height="724" alt="SAN - (Smart Assistive Navigator)" src="https://github.com/user-attachments/assets/315533d0-18b0-499b-a635-c413551c5400" />
+
+---
+
+Main Loop
+
+│
+
+├── Read Sensors
+
+├── Median Filter
+
+├── State Machine
+
+├── LCD Manager
+
+├── Alert Manager
+
+└── Serial Debug
 
 ---
 
@@ -200,6 +255,28 @@ Although the current prototype demonstrates the core navigation system, future v
 
 ---
 
+## Repository Structure
+
+Smart-Assistive-Navigator/
+
+│
+
+├── Firmware/
+
+├── Circuit/
+
+├── Images/
+
+├── Demo/
+
+├── Documents/
+
+├── BOM/
+
+└── README.md
+
+---
+
 ## What I Learned
 
 Building this project taught me much more than simply connecting sensors to an Arduino.
@@ -218,21 +295,6 @@ Perhaps the biggest lesson was that making a system *reliable* is often more dif
 
 ---
 
-## Repository Structure
-
-```
-Smart-Assistive-Navigator/
-
-Firmware/
-Circuit/
-Images/
-Demo/
-Documents/
-BOM/
-README.md
-```
-
----
 
 ## Author
 
