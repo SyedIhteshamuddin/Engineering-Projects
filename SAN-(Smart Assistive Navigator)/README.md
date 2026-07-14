@@ -2,7 +2,9 @@
 
 <img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
 
-*A wearable assistive navigation system designed to help visually impaired users detect obstacles and unsafe walking surfaces using real-time ultrasonic sensing.*
+## Project Overview
+
+Smart Assistive Navigator (SAN) is a wearable embedded system prototype designed to improve mobility for visually impaired users by detecting obstacles and sudden ground drops using dual ultrasonic sensing. The system processes real-time sensor data through a finite state machine and communicates hazards using haptic, audio, and visual feedback.
 
 ---
 
@@ -129,27 +131,30 @@ Update LCD
       ▼
 Generate Audio & Haptic Alerts
 ```
-  
- ## Working Principle
-          ┌──────────────┐
-          │    START     │
-          └──────┬───────┘
-                 │
-                 ▼
-      Read Front & Ground Sensors
-                 │
-                 ▼
-        Median Noise Filtering
-                 │
-                 ▼
-      Navigation State Machine
-                 │
-      ┌──────────┼──────────┐
-      ▼          ▼          ▼
-   LCD Update  Vibrator   Buzzer
-                 │
-                 ▼
-             Repeat Loop
+---  
+## Working Principle
+
+```text
+        ┌──────────────┐
+        │    START     │
+        └──────┬───────┘
+               │
+               ▼
+ Read Front & Ground Sensors
+               │
+               ▼
+    Median Noise Filtering
+               │
+               ▼
+ Navigation State Machine
+               │
+      ┌────────┼────────┐
+      ▼        ▼        ▼
+ LCD Update  Vibrator  Buzzer
+               │
+               ▼
+          Repeat Loop
+```
 
 
 ---
@@ -167,51 +172,52 @@ Generate Audio & Haptic Alerts
 ---
 ## Repository Structure
 
+```text
 Smart-Assistive-Navigator/
-
+│
 ├── Firmware/
-│     └── SAN.ino
+│   └── SAN.ino
 │
 ├── Circuit/
-│     └── Tinkercad Design
+│   └── Tinkercad Design
 │
 ├── Images/
-│     ├── Hero.png
-│     ├── Circuit.png
-│     └── Workflow.png
+│   ├── Hero.png
+│   ├── Circuit.png
+│   └── Workflow.png
 │
 ├── Demo/
-│     └── Demo.mp4
+│   └── Demo.mp4
 │
 ├── BOM/
-│     └── Bill_of_Materials.pdf
+│   └── Bill_of_Materials.pdf
 │
 └── README.md
-
+```
 ---
 ## Software Architecture
 
+```text
 loop()
-
 │
-
 ├── Sensor Module
-│      ├── Front Sensor
-│      └── Ground Sensor
+│   ├── Front Sensor
+│   └── Ground Sensor
 │
 ├── Signal Processing
-│      └── Median Filter
+│   └── Median Filter
 │
 ├── Decision Engine
-│      └── Finite State Machine
+│   └── Finite State Machine
 │
 ├── Display Manager
 │
 ├── Alert Controller
-│      ├── Vibration
-│      └── Buzzer
+│   ├── Vibration Motor
+│   └── Piezo Buzzer
 │
 └── Serial Debug
+```
 ---
 
 ## Software Design
@@ -241,19 +247,16 @@ This modular structure made testing and debugging significantly easier during de
 ---
 ## Key Specifications
 
-Obstacle Detection Range: 2–300 cm
-
-Ground Drop Detection Threshold: 22 cm
-
-Controller: Arduino Uno
-
-Processing: Real-Time FSM
-
-Noise Reduction: Median Filter
-
-Feedback Modes: LCD + Vibration + Buzzer
-
-Firmware Language: Embedded C++
+| Specification | Value |
+|--------------|-------|
+| Controller | Arduino Uno |
+| Programming Language | Embedded C++ |
+| Sensors | 2 × HC-SR04 |
+| Detection Range | 2–300 cm |
+| Drop Detection Threshold | 22 cm |
+| Feedback | LCD + Vibration + Buzzer |
+| Firmware Architecture | Finite State Machine |
+| Signal Processing | Median Filter |
 
 
 ---
@@ -295,17 +298,15 @@ Throughout development I learned about:
 Perhaps the biggest lesson was that making a system *reliable* is often more difficult than making it simply *work*.
 
 ---
-Project Status
+## Project Status
 
-✔ Prototype Complete
-
-✔ Fully Simulated
-
-✔ Modular Firmware
-
-✔ Documentation Complete
-
-✔ Demo Available
+| Status | Progress |
+|---------|----------|
+| Prototype | ✅ Complete |
+| Firmware | ✅ Complete |
+| Simulation | ✅ Tested |
+| Documentation | ✅ Complete |
+| Demo Video | ✅ Available |
 ---
 
 ## Author
@@ -318,6 +319,6 @@ Interested in Embedded Systems, Electrical Engineering, and Assistive Technologi
 
 ---
 
-Thank you for visiting this project.
+## Feedback
 
-If you have suggestions or ideas for improving the Smart Assistive Navigator, I'd be happy to hear them.
+If you have suggestions, ideas, or improvements for this project, feel free to open an issue or reach out. Constructive feedback is always welcome.
