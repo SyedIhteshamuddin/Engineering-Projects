@@ -106,40 +106,6 @@ This project explores a low-cost embedded solution capable of providing earlier 
 <img width="1738" height="724" alt="SAN - (Smart Assistive Navigator)" src="https://github.com/user-attachments/assets/315533d0-18b0-499b-a635-c413551c5400" />
 
 ---
-## Working Principle
-
-Start
-
-↓
-
-Read Front Sensor
-
-↓
-
-Read Ground Sensor
-
-↓
-
-Median Filter
-
-↓
-
-Determine Navigation State
-
-↓
-
-Generate Alerts
-
-↓
-
-Update LCD
-
-↓
-
-Repeat
-
----
-
 # Navigation Logic
 
 ```
@@ -329,7 +295,18 @@ Throughout development I learned about:
 Perhaps the biggest lesson was that making a system *reliable* is often more difficult than making it simply *work*.
 
 ---
+Project Status
 
+✔ Prototype Complete
+
+✔ Fully Simulated
+
+✔ Modular Firmware
+
+✔ Documentation Complete
+
+✔ Demo Available
+---
 
 ## Author
 
