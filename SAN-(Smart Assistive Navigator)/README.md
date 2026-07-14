@@ -1,4 +1,4 @@
-Smart Assistive Navigator (SAN)
+# Smart Assistive Navigator (SAN)
 
 <img width="1011" height="791" alt="SAN 1" src="https://github.com/user-attachments/assets/44275c3b-d59e-4338-9a96-b11817c41e64" />
 
@@ -106,7 +106,7 @@ This project explores a low-cost embedded solution capable of providing earlier 
 <img width="1738" height="724" alt="SAN - (Smart Assistive Navigator)" src="https://github.com/user-attachments/assets/315533d0-18b0-499b-a635-c413551c5400" />
 
 ---
-# Navigation Logic
+## Navigation Logic
 
 ```
 Read Sensors
