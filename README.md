@@ -45,14 +45,19 @@ Each project folder usually contains:
 
 This repository also includes a few engineering-related certificates and learning records connected to:
 
+- MITx Certificate
+-Circuit Analysis
+-Electronics
+
 - MATLAB
 -automation
 -embedded systems
 -engineering software/tools
 
-- MITx Certificate
--Circuit Analysis
--Electronics
+- Altium PCB Design Course
+- PCB Designing
+- PCB Manufacturing
+- PCB Simulation
 
 
 Check Certifications Folder for more details.
