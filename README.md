@@ -55,9 +55,9 @@ This repository also includes a few engineering-related certificates and learnin
 -engineering software/tools
 
 - Altium PCB Design Course
--PCB Designing
--PCB Manufacturing
--PCB Simulation
+ -PCB Designing
+ -PCB Manufacturing
+ -PCB Simulation
 
 
 Check Certifications Folder for more details.
